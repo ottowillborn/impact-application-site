@@ -1,0 +1,356 @@
+/* --- CSS Resets and Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* impact.com's main blue and complementary colors */
+    --primary-blue: #0A6CFF;
+    --secondary-green: #01E6BE; 
+    --text-dark: #1D1D1F;
+    --text-light: #444;
+    --bg-light: #FFFFFF;
+    --bg-gray: #F6F9FC; /* Livid 100 for background sections */
+    --border-color: #D1E0FF; /* Blue 300 for soft accents */
+    --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--bg-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.3rem; }
+
+p { margin-bottom: 1em; }
+
+strong, b { font-weight: 700; color: var(--text-dark); }
+
+/* --- Buttons/CTAs --- */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px 10px 5px 0;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.3s, opacity 0.3s;
+    border: 2px solid transparent;
+}
+
+.primary-cta {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+    border-color: var(--primary-blue);
+}
+
+.primary-cta:hover {
+    background-color: #0050D4; /* Darker blue */
+    opacity: 0.9;
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.secondary-cta:hover {
+    background-color: var(--primary-blue);
+    color: var(--bg-light);
+}
+
+.final-cta {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* --- Header/Navigation --- */
+.header {
+    background-color: var(--bg-light);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--bg-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.header nav a {
+    margin-left: 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.1em;
+    color: var(--primary-blue);
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.availability-badge {
+    display: inline-block;
+    background-color: var(--secondary-green);
+    color: var(--text-dark);
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.hero-cta-group {
+    margin-top: 20px;
+}
+
+
+/* --- Section Styling --- */
+.section {
+    padding: 60px 0;
+}
+
+.gray-bg {
+    background-color: var(--bg-gray);
+}
+
+.section-lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+
+/* --- Why impact.com (Culture Fit) --- */
+.quote-box {
+    background-color: #E2ECFF; /* Blue 200 */
+    border-left: 5px solid var(--primary-blue);
+    padding: 20px;
+    margin-bottom: 40px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.feature-card {
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Skills Section --- */
+.skill-group {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border: 1px dashed var(--primary-blue);
+    border-radius: 8px;
+}
+
+.skill-group h3 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--primary-blue);
+}
+
+.skill-group ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-group li {
+    background-color: #D1E0FF; /* Blue 300 */
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tech-item {
+    border-left: 4px solid var(--primary-blue);
+    padding-left: 15px;
+}
+
+.tech-item h4 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+
+/* --- Portfolio Section --- */
+.project-card {
+    background-color: var(--bg-light);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--secondary-green);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.project-links a {
+    margin-top: 15px;
+}
+
+
+/* --- Footer/Contact --- */
+footer {
+    background-color: var(--text-dark); 
+    color: var(--bg-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.footer-content h2 {
+    color: var(--bg-light);
+    font-size: 2.5rem;
+}
+
+.footer-content p {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.social-links a {
+    color: var(--secondary-green);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+    .header nav {
+        margin-top: 10px;
+    }
+    .header nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+    
+    .hero {
+        padding: 50px 0;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .cta-button {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .skill-group li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}

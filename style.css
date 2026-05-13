@@ -48,13 +48,14 @@ strong, b { font-weight: 700; color: var(--text-dark); }
 /* --- Buttons/CTAs --- */
 .cta-button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 32px; 
     margin: 5px 10px 5px 0;
     text-decoration: none;
     font-weight: 600;
-    border-radius: 6px;
-    transition: background-color 0.3s, opacity 0.3s;
+    border-radius: 50px;
+    transition: all 0.3s ease;
     border: 2px solid transparent;
+    text-align: center;
 }
 
 .primary-cta {
